@@ -10,22 +10,20 @@ import SwiftUI
 struct TasksView: View {
   @StateObject var viewModel = TaskViewModel()
   @State private var isShowingAddTodoView = false
-  @State private var focusId: String?
-  
   
   fileprivate func FiltersView() -> some View {
     
     return Menu("Filter") {
       Button("Completed", action: {
-        viewModel.filterType =  .completed
+        viewModel.filterType = .completed
       })
+      
       Button("Not Completed", action: {
-        viewModel.filterType =  .notCompleted
-        
+        viewModel.filterType = .notCompleted
       })
+      
       Button("Clear", action: {
-        viewModel.filterType =  .none
-        
+        viewModel.filterType = .none
       })
     }
   }
@@ -34,14 +32,10 @@ struct TasksView: View {
     NavigationStack {
       List {
         ForEach(viewModel.tasks) { task in
-          VStack(alignment: .leading, spacing: 8) {
-            HStack {
-              TaskItemView(item: task, viewModel: viewModel)
-            }
-          }
+          TaskItemView(item: task, viewModel: viewModel)
         }
         .onMove(perform: viewModel.moveItem)
-
+        
       }
       .toolbar {
         ToolbarItemGroup(placement: .navigationBarTrailing) {

@@ -16,11 +16,11 @@ struct AddTaskView: View {
     viewModel.addNewTaks()
     presentationMode.wrappedValue.dismiss()
   }
-
+  
   func dismiss() {
     presentationMode.wrappedValue.dismiss()
   }
-
+  
   var body: some View {
     NavigationStack {
       Form {
@@ -45,12 +45,12 @@ struct AddTaskView: View {
         }
       }
     }
-      
-    }
+    
+  }
 }
 struct AddTaskView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddTaskView()
-        .environmentObject(TaskViewModel())
-    }
+  static var previews: some View {
+    AddTaskView()
+      .environmentObject(TaskViewModel())
+  }
 }

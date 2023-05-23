@@ -18,7 +18,6 @@
 		DA72ADE42A1D22A6001BDF9D /* TaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA72ADE32A1D22A6001BDF9D /* TaskItemView.swift */; };
 		DA72ADE62A1D32AC001BDF9D /* FilterTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA72ADE52A1D32AB001BDF9D /* FilterTypes.swift */; };
 		DA72ADEB2A1D32FE001BDF9D /* AddTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA72ADEA2A1D32FE001BDF9D /* AddTaskViewModel.swift */; };
-		DA72ADED2A1D3471001BDF9D /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA72ADEC2A1D3471001BDF9D /* CheckboxToggleStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +33,6 @@
 		DA72ADE32A1D22A6001BDF9D /* TaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemView.swift; sourceTree = "<group>"; };
 		DA72ADE52A1D32AB001BDF9D /* FilterTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTypes.swift; sourceTree = "<group>"; };
 		DA72ADEA2A1D32FE001BDF9D /* AddTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModel.swift; sourceTree = "<group>"; };
-		DA72ADEC2A1D3471001BDF9D /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +85,6 @@
 		DA72ADD22A1D1E4B001BDF9D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DA72ADD32A1D1E52001BDF9D /* Model */,
 				DA72ADEE2A1D34C3001BDF9D /* TaskView */,
 			);
 			path = Views;
@@ -110,14 +107,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		DA72ADE72A1D32BF001BDF9D /* Modifiers */ = {
-			isa = PBXGroup;
-			children = (
-				DA72ADEC2A1D3471001BDF9D /* CheckboxToggleStyle.swift */,
-			);
-			path = Modifiers;
-			sourceTree = "<group>";
-		};
 		DA72ADE82A1D32DF001BDF9D /* AddTaskView */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,9 +127,10 @@
 		DA72ADEE2A1D34C3001BDF9D /* TaskView */ = {
 			isa = PBXGroup;
 			children = (
-				DA72ADC62A1D1E37001BDF9D /* TasksView.swift */,
+				DA72ADD32A1D1E52001BDF9D /* Model */,
 				DA72ADEF2A1D34DB001BDF9D /* Views */,
 				DA72ADD82A1D1F15001BDF9D /* ViewModel */,
+				DA72ADC62A1D1E37001BDF9D /* TasksView.swift */,
 			);
 			path = TaskView;
 			sourceTree = "<group>";
@@ -148,9 +138,8 @@
 		DA72ADEF2A1D34DB001BDF9D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DA72ADE72A1D32BF001BDF9D /* Modifiers */,
+				DA72ADF12A1D665B001BDF9D /* TaskItemView */,
 				DA72ADE82A1D32DF001BDF9D /* AddTaskView */,
-				DA72ADE32A1D22A6001BDF9D /* TaskItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,6 +150,14 @@
 				DA72ADE12A1D20DB001BDF9D /* Extension+NotificationName.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DA72ADF12A1D665B001BDF9D /* TaskItemView */ = {
+			isa = PBXGroup;
+			children = (
+				DA72ADE32A1D22A6001BDF9D /* TaskItemView.swift */,
+			);
+			path = TaskItemView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,7 +236,6 @@
 				DA72ADC52A1D1E37001BDF9D /* SimpleTaskManagerApp.swift in Sources */,
 				DA72ADE42A1D22A6001BDF9D /* TaskItemView.swift in Sources */,
 				DA72ADD72A1D1EE4001BDF9D /* AddTaskView.swift in Sources */,
-				DA72ADED2A1D3471001BDF9D /* CheckboxToggleStyle.swift in Sources */,
 				DA72ADE22A1D20DB001BDF9D /* Extension+NotificationName.swift in Sources */,
 				DA72ADDC2A1D1F36001BDF9D /* TasksVewModel.swift in Sources */,
 				DA72ADE62A1D32AC001BDF9D /* FilterTypes.swift in Sources */,

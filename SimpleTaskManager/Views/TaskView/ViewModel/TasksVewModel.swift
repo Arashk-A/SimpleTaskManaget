@@ -10,19 +10,11 @@ import Combine
 
 
 class TaskViewModel: ObservableObject {
-  @Published var alltasks: [Task] = [] {
-    didSet {
-        tasks = filterTasks()
-    }
-  }
+  @Published var alltasks: [Task] = []
   
   @Published var tasks: [Task] = []
   
-  @Published var filterType = FilterTypes.none {
-      didSet {
-          tasks = filterTasks()
-      }
-  }
+  @Published var filterType = FilterTypes.none
   
   private var cancelable: AnyCancellable?
     
@@ -38,6 +30,12 @@ class TaskViewModel: ObservableObject {
     // This is for loading dummy data
     // alltasks = Task.dummyData
 
+    Publishers.CombineLatest($alltasks, $filterType)
+      .receive(on: DispatchQueue.main)
+      .compactMap({ [weak self] _ in
+        self?.filterTasks()
+      })
+      .assign(to: &$tasks)
   }
   
   func moveItem(from source: IndexSet, to destination: Int) {
